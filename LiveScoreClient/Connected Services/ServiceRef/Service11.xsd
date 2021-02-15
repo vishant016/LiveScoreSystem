@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveScoreSystem" />
+  <xs:element name="insertPlayers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LiveScoreSystem" minOccurs="0" name="players" nillable="true" type="q1:Player" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertPlayersResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="insertTeams">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LiveScoreSystem" minOccurs="0" name="teams" nillable="true" type="q1:WCFContact" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LiveScoreSystem" minOccurs="0" name="teams" nillable="true" type="q2:Team" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="insertTeamsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertTeamsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertMatches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LiveScoreSystem" minOccurs="0" name="matches" nillable="true" type="q3:Match" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertMatchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertMatchesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCommentries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LiveScoreSystem" minOccurs="0" name="comentries" nillable="true" type="q4:Commentry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCommentriesResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

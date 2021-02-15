@@ -15,29 +15,29 @@ namespace Host.ServiceRef {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceRef.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insert", ReplyAction="http://tempuri.org/IService1/InsertResponse")]
-        int Insert(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPlayers", ReplyAction="http://tempuri.org/IService1/insertPlayersResponse")]
+        void insertPlayers(LiveScoreSystem.Player players);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insert", ReplyAction="http://tempuri.org/IService1/InsertResponse")]
-        System.Threading.Tasks.Task<int> InsertAsync(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPlayers", ReplyAction="http://tempuri.org/IService1/insertPlayersResponse")]
+        System.Threading.Tasks.Task insertPlayersAsync(LiveScoreSystem.Player players);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        int Update(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertTeams", ReplyAction="http://tempuri.org/IService1/insertTeamsResponse")]
+        int insertTeams(LiveScoreSystem.Team teams);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Update", ReplyAction="http://tempuri.org/IService1/UpdateResponse")]
-        System.Threading.Tasks.Task<int> UpdateAsync(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertTeams", ReplyAction="http://tempuri.org/IService1/insertTeamsResponse")]
+        System.Threading.Tasks.Task<int> insertTeamsAsync(LiveScoreSystem.Team teams);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectAll", ReplyAction="http://tempuri.org/IService1/SelectAllResponse")]
-        LiveScoreSystem.WCFContact[] SelectAll();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertMatches", ReplyAction="http://tempuri.org/IService1/insertMatchesResponse")]
+        int insertMatches(LiveScoreSystem.Match matches);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectAll", ReplyAction="http://tempuri.org/IService1/SelectAllResponse")]
-        System.Threading.Tasks.Task<LiveScoreSystem.WCFContact[]> SelectAllAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertMatches", ReplyAction="http://tempuri.org/IService1/insertMatchesResponse")]
+        System.Threading.Tasks.Task<int> insertMatchesAsync(LiveScoreSystem.Match matches);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Delete", ReplyAction="http://tempuri.org/IService1/DeleteResponse")]
-        int Delete(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertCommentries", ReplyAction="http://tempuri.org/IService1/insertCommentriesResponse")]
+        void insertCommentries(LiveScoreSystem.Commentry comentries);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Delete", ReplyAction="http://tempuri.org/IService1/DeleteResponse")]
-        System.Threading.Tasks.Task<int> DeleteAsync(LiveScoreSystem.WCFContact ContactPar);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertCommentries", ReplyAction="http://tempuri.org/IService1/insertCommentriesResponse")]
+        System.Threading.Tasks.Task insertCommentriesAsync(LiveScoreSystem.Commentry comentries);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,36 +67,36 @@ namespace Host.ServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public int Insert(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.Insert(ContactPar);
+        public void insertPlayers(LiveScoreSystem.Player players) {
+            base.Channel.insertPlayers(players);
         }
         
-        public System.Threading.Tasks.Task<int> InsertAsync(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.InsertAsync(ContactPar);
+        public System.Threading.Tasks.Task insertPlayersAsync(LiveScoreSystem.Player players) {
+            return base.Channel.insertPlayersAsync(players);
         }
         
-        public int Update(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.Update(ContactPar);
+        public int insertTeams(LiveScoreSystem.Team teams) {
+            return base.Channel.insertTeams(teams);
         }
         
-        public System.Threading.Tasks.Task<int> UpdateAsync(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.UpdateAsync(ContactPar);
+        public System.Threading.Tasks.Task<int> insertTeamsAsync(LiveScoreSystem.Team teams) {
+            return base.Channel.insertTeamsAsync(teams);
         }
         
-        public LiveScoreSystem.WCFContact[] SelectAll() {
-            return base.Channel.SelectAll();
+        public int insertMatches(LiveScoreSystem.Match matches) {
+            return base.Channel.insertMatches(matches);
         }
         
-        public System.Threading.Tasks.Task<LiveScoreSystem.WCFContact[]> SelectAllAsync() {
-            return base.Channel.SelectAllAsync();
+        public System.Threading.Tasks.Task<int> insertMatchesAsync(LiveScoreSystem.Match matches) {
+            return base.Channel.insertMatchesAsync(matches);
         }
         
-        public int Delete(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.Delete(ContactPar);
+        public void insertCommentries(LiveScoreSystem.Commentry comentries) {
+            base.Channel.insertCommentries(comentries);
         }
         
-        public System.Threading.Tasks.Task<int> DeleteAsync(LiveScoreSystem.WCFContact ContactPar) {
-            return base.Channel.DeleteAsync(ContactPar);
+        public System.Threading.Tasks.Task insertCommentriesAsync(LiveScoreSystem.Commentry comentries) {
+            return base.Channel.insertCommentriesAsync(comentries);
         }
     }
 }

@@ -5,25 +5,81 @@
       <xsd:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveScoreSystem" />
-      <xsd:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_insertPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPlayers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPlayersResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_insertTeams_InputMessage">
     <wsdl:part name="parameters" element="tns:insertTeams" />
   </wsdl:message>
   <wsdl:message name="IService1_insertTeams_OutputMessage">
     <wsdl:part name="parameters" element="tns:insertTeamsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_insertMatches_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertMatches" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertMatches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertMatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertCommentries_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCommentries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_insertCommentries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCommentriesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="insertPlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertPlayers" message="tns:IService1_insertPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertPlayersResponse" message="tns:IService1_insertPlayers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="insertTeams">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertTeams" message="tns:IService1_insertTeams_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertTeamsResponse" message="tns:IService1_insertTeams_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="insertMatches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertMatches" message="tns:IService1_insertMatches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertMatchesResponse" message="tns:IService1_insertMatches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCommentries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertCommentries" message="tns:IService1_insertCommentries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertCommentriesResponse" message="tns:IService1_insertCommentries_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertPlayers">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertTeams">
       <soap:operation soapAction="http://tempuri.org/IService1/insertTeams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMatches">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertMatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCommentries">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertCommentries" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

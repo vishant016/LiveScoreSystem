@@ -53,6 +53,7 @@ H:\LiveScoreSystem\LiveScoreClient\bin\roslyn\VBCSCompiler.exe.config
 H:\LiveScoreSystem\LiveScoreClient\bin\Antlr3.Runtime.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\AspNet.ScriptManager.bootstrap.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\AspNet.ScriptManager.jQuery.dll
+H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\Microsoft.AspNet.FriendlyUrls.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -62,6 +63,8 @@ H:\LiveScoreSystem\LiveScoreClient\bin\Microsoft.Web.Infrastructure.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\Newtonsoft.Json.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\System.Web.Optimization.dll
 H:\LiveScoreSystem\LiveScoreClient\bin\WebGrease.dll
+H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.pdb
+H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.dll.config
 H:\LiveScoreSystem\LiveScoreClient\bin\System.Web.Optimization.xml
 H:\LiveScoreSystem\LiveScoreClient\bin\Newtonsoft.Json.xml
 H:\LiveScoreSystem\LiveScoreClient\bin\Antlr3.Runtime.pdb
@@ -72,6 +75,3 @@ H:\LiveScoreSystem\LiveScoreClient\obj\Debug\LiveScoreClient.csproj.CoreCompileI
 H:\LiveScoreSystem\LiveScoreClient\obj\Debug\LiveScoreClient.csproj.CopyComplete
 H:\LiveScoreSystem\LiveScoreClient\obj\Debug\LiveScoreClient.dll
 H:\LiveScoreSystem\LiveScoreClient\obj\Debug\LiveScoreClient.pdb
-H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.dll
-H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.pdb
-H:\LiveScoreSystem\LiveScoreClient\bin\LiveScoreSystem.dll.config

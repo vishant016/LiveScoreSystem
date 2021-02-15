@@ -1,7 +1,7 @@
-H:\LiveScoreSystem\Host\bin\Debug\Host.exe.config
 H:\LiveScoreSystem\Host\bin\Debug\Host.exe
-H:\LiveScoreSystem\Host\bin\Debug\Host.pdb
 H:\LiveScoreSystem\Host\bin\Debug\LiveScoreSystem.dll
+H:\LiveScoreSystem\Host\bin\Debug\Host.exe.config
+H:\LiveScoreSystem\Host\bin\Debug\Host.pdb
 H:\LiveScoreSystem\Host\bin\Debug\LiveScoreSystem.pdb
 H:\LiveScoreSystem\Host\bin\Debug\LiveScoreSystem.dll.config
 H:\LiveScoreSystem\Host\obj\Debug\Host.csprojAssemblyReference.cache

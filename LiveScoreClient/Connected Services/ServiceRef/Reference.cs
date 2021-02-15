@@ -15,11 +15,29 @@ namespace LiveScoreClient.ServiceRef {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceRef.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertTeams", ReplyAction="http://tempuri.org/IService1/insertTeamsResponse")]
-        void insertTeams(LiveScoreSystem.WCFContact teams);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPlayers", ReplyAction="http://tempuri.org/IService1/insertPlayersResponse")]
+        void insertPlayers(LiveScoreSystem.Player players);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertPlayers", ReplyAction="http://tempuri.org/IService1/insertPlayersResponse")]
+        System.Threading.Tasks.Task insertPlayersAsync(LiveScoreSystem.Player players);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertTeams", ReplyAction="http://tempuri.org/IService1/insertTeamsResponse")]
-        System.Threading.Tasks.Task insertTeamsAsync(LiveScoreSystem.WCFContact teams);
+        int insertTeams(LiveScoreSystem.Team teams);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertTeams", ReplyAction="http://tempuri.org/IService1/insertTeamsResponse")]
+        System.Threading.Tasks.Task<int> insertTeamsAsync(LiveScoreSystem.Team teams);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertMatches", ReplyAction="http://tempuri.org/IService1/insertMatchesResponse")]
+        int insertMatches(LiveScoreSystem.Match matches);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertMatches", ReplyAction="http://tempuri.org/IService1/insertMatchesResponse")]
+        System.Threading.Tasks.Task<int> insertMatchesAsync(LiveScoreSystem.Match matches);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertCommentries", ReplyAction="http://tempuri.org/IService1/insertCommentriesResponse")]
+        void insertCommentries(LiveScoreSystem.Commentry comentries);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/insertCommentries", ReplyAction="http://tempuri.org/IService1/insertCommentriesResponse")]
+        System.Threading.Tasks.Task insertCommentriesAsync(LiveScoreSystem.Commentry comentries);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +67,36 @@ namespace LiveScoreClient.ServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public void insertTeams(LiveScoreSystem.WCFContact teams) {
-            base.Channel.insertTeams(teams);
+        public void insertPlayers(LiveScoreSystem.Player players) {
+            base.Channel.insertPlayers(players);
         }
         
-        public System.Threading.Tasks.Task insertTeamsAsync(LiveScoreSystem.WCFContact teams) {
+        public System.Threading.Tasks.Task insertPlayersAsync(LiveScoreSystem.Player players) {
+            return base.Channel.insertPlayersAsync(players);
+        }
+        
+        public int insertTeams(LiveScoreSystem.Team teams) {
+            return base.Channel.insertTeams(teams);
+        }
+        
+        public System.Threading.Tasks.Task<int> insertTeamsAsync(LiveScoreSystem.Team teams) {
             return base.Channel.insertTeamsAsync(teams);
+        }
+        
+        public int insertMatches(LiveScoreSystem.Match matches) {
+            return base.Channel.insertMatches(matches);
+        }
+        
+        public System.Threading.Tasks.Task<int> insertMatchesAsync(LiveScoreSystem.Match matches) {
+            return base.Channel.insertMatchesAsync(matches);
+        }
+        
+        public void insertCommentries(LiveScoreSystem.Commentry comentries) {
+            base.Channel.insertCommentries(comentries);
+        }
+        
+        public System.Threading.Tasks.Task insertCommentriesAsync(LiveScoreSystem.Commentry comentries) {
+            return base.Channel.insertCommentriesAsync(comentries);
         }
     }
 }

@@ -7,52 +7,52 @@
       <xsd:import schemaLocation="http://localhost:49926/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveScoreSystem" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Insert" />
+  <wsdl:message name="IService1_insertPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPlayers" />
   </wsdl:message>
-  <wsdl:message name="IService1_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  <wsdl:message name="IService1_insertPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPlayersResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Update" />
+  <wsdl:message name="IService1_insertTeams_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertTeams" />
   </wsdl:message>
-  <wsdl:message name="IService1_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  <wsdl:message name="IService1_insertTeams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertTeamsResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_SelectAll_InputMessage">
-    <wsdl:part name="parameters" element="tns:SelectAll" />
+  <wsdl:message name="IService1_insertMatches_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertMatches" />
   </wsdl:message>
-  <wsdl:message name="IService1_SelectAll_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  <wsdl:message name="IService1_insertMatches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertMatchesResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_Delete_InputMessage">
-    <wsdl:part name="parameters" element="tns:Delete" />
+  <wsdl:message name="IService1_insertCommentries_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCommentries" />
   </wsdl:message>
-  <wsdl:message name="IService1_Delete_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  <wsdl:message name="IService1_insertCommentries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCommentriesResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="Insert">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insert" message="tns:IService1_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertResponse" message="tns:IService1_Insert_OutputMessage" />
+    <wsdl:operation name="insertPlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertPlayers" message="tns:IService1_insertPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertPlayersResponse" message="tns:IService1_insertPlayers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Update">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Update" message="tns:IService1_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateResponse" message="tns:IService1_Update_OutputMessage" />
+    <wsdl:operation name="insertTeams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertTeams" message="tns:IService1_insertTeams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertTeamsResponse" message="tns:IService1_insertTeams_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SelectAll">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectAll" message="tns:IService1_SelectAll_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectAllResponse" message="tns:IService1_SelectAll_OutputMessage" />
+    <wsdl:operation name="insertMatches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertMatches" message="tns:IService1_insertMatches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertMatchesResponse" message="tns:IService1_insertMatches_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Delete">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Delete" message="tns:IService1_Delete_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteResponse" message="tns:IService1_Delete_OutputMessage" />
+    <wsdl:operation name="insertCommentries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertCommentries" message="tns:IService1_insertCommentries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/insertCommentriesResponse" message="tns:IService1_insertCommentries_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Insert">
-      <soap:operation soapAction="http://tempuri.org/IService1/Insert" style="document" />
+    <wsdl:operation name="insertPlayers">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertPlayers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -60,8 +60,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Update">
-      <soap:operation soapAction="http://tempuri.org/IService1/Update" style="document" />
+    <wsdl:operation name="insertTeams">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertTeams" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -69,8 +69,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SelectAll">
-      <soap:operation soapAction="http://tempuri.org/IService1/SelectAll" style="document" />
+    <wsdl:operation name="insertMatches">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertMatches" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -78,8 +78,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Delete">
-      <soap:operation soapAction="http://tempuri.org/IService1/Delete" style="document" />
+    <wsdl:operation name="insertCommentries">
+      <soap:operation soapAction="http://tempuri.org/IService1/insertCommentries" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

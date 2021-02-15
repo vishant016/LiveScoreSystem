@@ -4,4 +4,3 @@ H:\LiveScoreSystem\LiveScoreSystem\bin\LiveScoreSystem.pdb
 H:\LiveScoreSystem\LiveScoreSystem\obj\Debug\LiveScoreSystem.csproj.CoreCompileInputs.cache
 H:\LiveScoreSystem\LiveScoreSystem\obj\Debug\LiveScoreSystem.dll
 H:\LiveScoreSystem\LiveScoreSystem\obj\Debug\LiveScoreSystem.pdb
-H:\LiveScoreSystem\LiveScoreSystem\obj\Debug\LiveScoreSystem.csprojAssemblyReference.cache

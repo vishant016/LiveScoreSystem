@@ -13,5 +13,10 @@ namespace LiveScoreClient
         {
 
         }
+
+        protected void Button21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
