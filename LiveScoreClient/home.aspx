@@ -24,7 +24,7 @@
                                     View Match
                                 </button>
                             </div>
-                        </div>
+                           </div>
                         <div class="row home_one_content_two">
                             <div class="col-lg-12">Host a match</div>
                             <div class="col-lg-12">
