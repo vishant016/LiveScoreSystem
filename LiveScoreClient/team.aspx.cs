@@ -58,7 +58,6 @@ namespace LiveScoreClient
 
 
 
-          
 
            int match_id= client.insertMatches(match);
             Team team1 = new Team
