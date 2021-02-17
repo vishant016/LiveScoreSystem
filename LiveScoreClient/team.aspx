@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col col-md-1"></div>
 
-                    <div class="col col-md-7 support-article">
+                    <div class="col col-md-6 support-article">
                         <div class="card" style="border:groove;">
                             <div class="card-header">
                                 <h4 class="card-title" style="text-align:center"> Add playing 11 of both the team</h4>
@@ -208,6 +208,8 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col col-md-1"></div>
+
                 </div>
             </form>
 
