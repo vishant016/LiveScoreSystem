@@ -134,6 +134,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="List.aspx" />
+    <Content Include="match.aspx" />
     <Content Include="Properties\DataSources\LiveScoreSystem.WCFContact.datasource" />
     <None Include="Connected Services\ServiceRef\Service1.wsdl" />
     <None Include="Connected Services\ServiceRef\Service1.xsd">
@@ -224,6 +226,20 @@
     </Compile>
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="match.aspx.cs">
+      <DependentUpon>match.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="match.aspx.designer.cs">
+      <DependentUpon>match.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scoreboard.aspx.cs">

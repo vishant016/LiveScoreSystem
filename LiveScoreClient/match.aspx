@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="scoreboard.aspx.cs" Inherits="LiveScoreClient.scoreboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="match.aspx.cs" Inherits="LiveScoreClient.match" %>
 
     <!DOCTYPE html>
 
@@ -16,15 +16,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-
-        <title>BAll to Ball reporting ;)</title>
+        <title>Live match</title>
     </head>
 
     <body>
+
         <div class="container-fluid" style="padding-top:50px">
-
             <form id="form1" runat="server">
-
                 <div class="row">
                     <div class="col col-md-1"></div>
 
@@ -32,9 +30,20 @@
                         <!-- top area -->
                         <div class="card" style="border:groove;">
                             <div class="card-header">
-                                <asp:Label ID="Label6" runat="server" Text="Team1 won the toss and choose to bat first">
-                                </asp:Label>
+                                <div class="row">
+
+                                    <div class="col-9">
+                                        <asp:Label ID="Label6" runat="server"
+                                            Text="Team1 won the toss and choose to bat first"></asp:Label>
+                                    </div>
+                                    <div class="col-3">
+                                        <asp:Button ID="Button1" runat="server" Text="Full ScoreBoard"
+                                            CssClass="btn btn-dark" />
+                                    </div>
+                                </div>
+
                             </div>
+
                             <div class="card-body">
                                 <table class="table table-striped">
 
@@ -56,8 +65,7 @@
                                                 <asp:Label ID="Label2" runat="server" Text="0"></asp:Label> / <asp:Label
                                                     ID="Label3" runat="server" Text="0"></asp:Label>
                                             </td>
-                                            <td> (<asp:Label ID="Label4" runat="server" Text="0.0"></asp:Label>
-                                                )
+                                            <td> (<asp:Label ID="Label4" runat="server" Text="0.0"></asp:Label>)
                                             </td>
                                             <td> &nbsp;&nbsp; RR.<asp:Label ID="Label5" runat="server" Text="0.0">
                                                 </asp:Label>
@@ -134,7 +142,6 @@
                         <br />
 
                         <!-- Current Bowler -->
-
                         <div class="card" style="border:groove;">
                             <div class="card-body">
                                 <table class="table table-striped">
@@ -172,74 +179,185 @@
                         </div>
                         <br />
 
-                        <!-- Host side work -->
-
+                        <!-- commentary -->
                         <div class="card" style="border:groove">
                             <div class="card-body">
-                                <table class="table table-striped">
 
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Balls</th>
+                                            <th scope="col">Commentary</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
+                                        <!-- 2 -->
                                         <tr>
-                                            <th scope="row">Run on Ball </th>
-                                            <td>
-                                                <asp:DropDownList ID="DropDownList1" runat="server">
-                                                    <asp:ListItem Selected="True" Value="0 ">0 Run</asp:ListItem>
-                                                    <asp:ListItem Value="1">1 Run</asp:ListItem>
-                                                    <asp:ListItem Value="2">2 Run</asp:ListItem>
-                                                    <asp:ListItem Value="3">3 Run</asp:ListItem>
-                                                    <asp:ListItem Value="4">4 Run</asp:ListItem>
-                                                    <asp:ListItem Value="6">6 Run</asp:ListItem>
-                                                </asp:DropDownList>
 
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label48" runat="server" Text="2"></asp:Label>
+                                                    </span></h2>
+                                            </th>
+
+                                            <td>
+                                                <asp:Label ID="Label60" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1.5 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+
+                                                        <asp:Label ID="Label47" runat="server" Text="1.5"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label59" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1.4 -->
+                                        <tr>
+                                            <th scope="row">
+
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label46" runat="server" Text="1.4"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+
+                                            <td>
+                                                <asp:Label ID="Label58" runat="server" Text="Label">
+                                                </asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1.3 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+
+                                                        <asp:Label ID="Label45" runat="server" Text="1.3"></asp:Label>
+
+                                                    </span>
+                                                </h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label57" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1.2 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+
+                                                        <asp:Label ID="Label44" runat="server" Text="1.2"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label56" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1.1 -->
+                                        <tr>
+
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label43" runat="server" Text="1.1"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label55" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <!-- 1 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+
+                                                        <asp:Label ID="Label42" runat="server" Text="1"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label54" runat="server" Text="Label"></asp:Label>
                                             </td>
 
                                         </tr>
+                                        <!-- 0.5 -->
                                         <tr>
-                                            <th scope="row">Ball Type </th>
-                                            <td>
-                                                <asp:DropDownList ID="DropDownList2" runat="server">
-                                                    <asp:ListItem Selected="True">Normal Ball</asp:ListItem>
-                                                    <asp:ListItem>Wide Ball</asp:ListItem>
-                                                    <asp:ListItem>No Ball</asp:ListItem>
-                                                    <asp:ListItem>Leg by</asp:ListItem>
-                                                </asp:DropDownList>
 
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label41" runat="server" Text="0.5"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label53" runat="server" Text="Label"></asp:Label>
                                             </td>
 
                                         </tr>
+                                        <!-- 0.4 -->
                                         <tr>
-                                            <th scope="row">Wicket</th>
+
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label40" runat="server" Text="0.4"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
                                             <td>
-                                                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                                                    <asp:ListItem Selected="True">No wicket</asp:ListItem>
-                                                    <asp:ListItem>Stricker&#39;s Wicket</asp:ListItem>
-                                                    <asp:ListItem>Non Stricker&#39;s Wicket</asp:ListItem>
-                                                </asp:RadioButtonList>
+                                                <asp:Label ID="Label52" runat="server" Text="Label"></asp:Label>
                                             </td>
 
                                         </tr>
+                                        <!-- 0.3 -->
                                         <tr>
-                                            <th scope="row">Commentary</th>
-                                            <td>
-                                                <asp:TextBox ID="TextBox1" runat="server" Height="55px" Width="516px"></asp:TextBox>
 
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label39" runat="server" Text="0.3"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label51" runat="server" Text="Label"></asp:Label>
+                                            </td>
+
+                                        </tr>
+                                        <!-- 0.2  -->
+                                        <tr>
+
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label38" runat="server" Text="0.2"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label50" runat="server" Text="Label"></asp:Label>
+                                            </td>
+
+                                        </tr>
+                                        <!-- 0.1 -->
+                                        <tr>
+
+                                            <th scope="row">
+                                                <h2><span class="badge badge-pill badge-secondary">
+                                                        <asp:Label ID="Label37" runat="server" Text="0.1"></asp:Label>
+
+                                                    </span></h2>
+                                            </th>
+                                            <td>
+                                                <asp:Label ID="Label49" runat="server" Text="Label"></asp:Label>
                                             </td>
                                         </tr>
-                                         </tbody>
-                                    
+                                    </tbody>
                                 </table>
-                                <br />
-                                <!-- submit button (submit on every ball) -->
-                                <asp:Button ID="Button21" runat="server" Text="Add" Width="106px"
-                                    CssClass="btn btn-outline-success btn-lg btn-block" />
-                               
-                                <!-- button 2 -->
-                                <!-- *end match*  so that we can keep track of match wether it is over or not. -->
-                                <asp:Button ID="Button22" runat="server" Text="End Match" Height="55px" Width="137px"
-                                    CssClass="btn btn-outline-danger btn-lg btn-block" />
-
                             </div>
-
                         </div>
                         <br />
                     </div>
